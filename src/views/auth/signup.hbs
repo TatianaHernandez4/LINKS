@@ -1,0 +1,71 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3>Registrarse</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/signup" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="username" placeholder="Nombre de usuario" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Contraseña" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="fullname" placeholder="Nombre Completo" class="form-control"
+                                autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="date" name="fechanaci" placeholder="Fecha de nacimiento" class="form-control">
+                            <small class="form-text text-muted">Debe ingresar su fecha de nacimiento.</small>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="email" name="correo" placeholder="Correo electrónico" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="phone" name="fono" placeholder="Teléfono" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Registrarse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const birthdateInput = document.querySelector('input[name="fechanaci"]');
+    
+    form.addEventListener('submit', function(event) {
+        const birthdateValue = new Date(birthdateInput.value);
+        const today = new Date();
+        const age = today.getFullYear() - birthdateValue.getFullYear();
+        const monthDiff = today.getMonth() - birthdateValue.getMonth();
+        const dayDiff = today.getDate() - birthdateValue.getDate();
+        
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+            age--;
+        }
+        
+        if (age < 18) {
+            event.preventDefault();
+            alert('Debes ser mayor de edad para registrarte.');
+        }
+    });
+});
+</script>
