@@ -1,0 +1,42 @@
+bcryptjs: ^2.4.3
+
+Librería para hashing de contraseñas, utilizada para seguridad de contraseñas.
+connect-flash: ^0.1.1
+
+Middleware para mensajes flash, utilizado para enviar mensajes temporales entre vistas.
+express: ^4.19.2
+
+Framework web para Node.js, utilizado para crear aplicaciones web y API.
+express-handlebars: ^7.1.2
+
+Motor de plantillas Handlebars para Express, utilizado para generar HTML dinámico.
+express-mysql-session: ^3.0.2
+
+Almacén de sesiones en MySQL para Express, utilizado para almacenar sesiones en una base de datos MySQL.
+express-session: ^1.18.0
+
+Middleware de manejo de sesiones para Express, utilizado para manejar sesiones de usuario.
+express-validator: ^7.0.1
+
+Librería para validación de datos en Express, utilizada para validar y sanitizar datos recibidos en las solicitudes.
+morgan: ^1.10.0
+
+Middleware de registro de solicitudes HTTP para Node.js, utilizado para registrar las solicitudes HTTP en el servidor.
+mysql: ^2.18.1
+
+Conector MySQL para Node.js, utilizado para interactuar con bases de datos MySQL desde Node.js.
+passport: ^0.7.0
+
+Middleware de autenticación para Node.js, utilizado para manejar la autenticación de usuarios.
+passport-local: ^1.0.0
+
+Estrategia de autenticación local para Passport, utilizada para autenticación con nombre de usuario y contraseña.
+timeago.js: ^4.0.2
+
+Librería para mostrar tiempos en formato "hace X tiempo", utilizada para mostrar tiempos relativos de manera amigable.
+Dependencias de desarrollo
+Las dependencias de desarrollo son bibliotecas necesarias solo para el entorno de desarrollo:
+
+nodemon: ^3.1.0
+Herramienta que reinicia automáticamente el servidor cuando detecta cambios en los archivos, mejorando el flujo de trabajo durante el desarrollo.
+Este archivo package.json contiene toda la información necesaria para gestionar las dependencias del proyecto y los scripts necesarios para su desarrollo y ejecución.
